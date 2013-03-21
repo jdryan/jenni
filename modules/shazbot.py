@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 """
-shazbot.py - VGS
+shazbot.py - Tribes Taunts
+VGS VGS VGS
+john@shiftregister.net
 """
 import pickle
 
@@ -143,6 +145,8 @@ def vgs(jenni, input):
     if woohoo is not None:
         jenni.say(woohoo)
 vgs.rule = r'(?i)(^)(v.{2,3})[ \t]*$'
+vgs.priority = 'medium'
+vgs.example = 'vgs'
 
 def openuservgs():
     # read python dict back from the file
@@ -170,6 +174,8 @@ def remvgs(jenni, input):
     else:
         jenni.say('Aww, that\'s too bad!')
 remvgs.rule = r'(?i)(^remvgs: )(v.{2,3})[ \t]*$'
+remvgs.priority = 'low'
+remvgs.example = 'remvgs: vgbr'
 
 def addvgs(jenni, input):
     jenni.say('Adding...')
@@ -187,6 +193,8 @@ def addvgs(jenni, input):
     vgsusertable[str(shaz.upper())]=str(woohoo)
     saveuservgs(vgsusertable)
 addvgs.rule = r'(?i)(^addvgs: )(v.{2,3})(=")(.*)(")[ \t]*$'
+addvgs.priority = 'low'
+addvgs.example = 'addvgs: vgbr="It\'s beer thirty!"'
 
 
 if __name__ == '__main__': 
