@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 """
-wololo.py - 14 14 14 14 14 14 14 14
+wololo.py - AOE2 Taunts
+14 14 14 14 14 14 14 14
+john@shiftregister.net
 """
-import pickle
 
 wololotable = {'1' : 'Yes.', \
                '2' : 'No.', \
@@ -42,7 +43,9 @@ def wololo(jenni, input):
     roggan = wololotable.get(wololo)
     if roggan is not None:
         jenni.say(roggan)
-wololo.rule = r'(?i)(^)([1-9][0-9]?)[ \t]*$'
+wololo.rule = r'(?i)(^)([1-3][0-9]?)[ \t]*$'
+wololo.priority = 'low'
+wololo.example = '14'
 
 if __name__ == '__main__': 
    print __doc__.strip()
