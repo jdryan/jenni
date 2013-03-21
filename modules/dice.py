@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-scores.py - Slap Module
-Copyright 2009, Michael Yanovich, yanovich.net
+dice.py - Dice rolling module
+john@shiftregister.net
 
 More info:
  * Jenni: https://github.com/myano/jenni/
@@ -28,6 +28,8 @@ def diceroll(jenni, input):
     
     jenni.say(output)
 diceroll.rule='\!([0-9]+)d([0-9]+)'
+diceroll.priority='low'
+diceroll.example='!2d20'
 
 if __name__ == '__main__':
     print __doc__.strip()
