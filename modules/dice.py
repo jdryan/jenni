@@ -18,7 +18,7 @@ def diceroll(jenni, input):
     output = input.nick + ': ' + str(dice) + 'd' + str(sides) + ': '
 
     if (1 <= dice < 1001 and 1 < sides < 1001):
-        results = [random.randrange(1,sides) for x in xrange(dice)]
+        results = [random.randint(1,sides) for x in xrange(dice)]
         if (dice < 11):
             output += str(results) + "  "
         output += "Total: " + str(sum(results))
